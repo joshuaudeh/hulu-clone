@@ -1,0 +1,51 @@
+.navbar__container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+.navbar::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar > p {
+  white-space: nowrap;
+  margin: 10px;
+  cursor: pointer;
+}
+.navbar > p:hover {
+  transition: all 0.5s;
+  transform: scale(105%);
+}
+
+.navbar > p:active {
+  color: #dd2323;
+}
+
+.navbar > p:last-child {
+  padding-right: 1rem;
+}
+
+.navbar__fade {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 5px;
+  color: transparent;
+  right: 0;
+  height: 1.9rem;
+  width: 10px;
+  backdrop-filter: blur(10px);
+}
+
+@media only screen and (min-width: 910px) {
+  .navbar {
+    padding-left: 3rem;
+    width: 100%;
+  }
+}

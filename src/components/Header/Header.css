@@ -1,0 +1,85 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header__right {
+  display: flex;
+}
+
+.headerIcon__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 100px;
+  cursor: pointer;
+}
+
+.headerIcon__container:hover > .icon {
+  animation: bounce 1s linear;
+}
+
+@keyframes bounce {
+  20%,
+  50%,
+  80%,
+  to {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  65% {
+    transform: translateY(-15px);
+  }
+  85% {
+    transform: translateY(-5px);
+  }
+}
+
+.headerIcon__container .title {
+  opacity: 0;
+  margin: 5px;
+}
+
+.headerIcon__container:hover .title {
+  opacity: 1;
+}
+
+.headerIcon__container:hover {
+  color: #fff;
+}
+
+.header__left {
+  margin-right: 10px;
+  margin-top: -20px;
+}
+
+.header__left > h1 {
+  font-family: "Dosis", sans-serif;
+  color: #fff;
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 370px) {
+  .headerIcon__container {
+    max-width: 40px;
+  }
+}
+
+@media only screen and (max-width: 715px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .headerIcon__container {
+    width: 60px;
+  }
+}
