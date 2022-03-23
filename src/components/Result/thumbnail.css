@@ -67,19 +67,24 @@ h3 {
   .results__Container {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
+  .thumbnail {
+    padding: 1rem;
+  }
 }
 
-@media only screen and (min-width: 2000px) {
+@media only screen and (min-width: 2560px) {
   .results__Container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
   .thumbnail {
     padding: 1rem;
   }
   .thumbnail p {
     padding: 1rem 0px;
+  }
+  .thumbnail img {
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
   }
 }

@@ -13,20 +13,20 @@ function Results() {
   let query = useQuery();
   const genre = query.get("genre");
 
-  const fetchData = async () => {
-    try {
-      const rawData = await fetch(
-        `https://api.themoviedb.org/3${data[genre].url ||
-          data.fetchTrending.url}`
-      );
-      const response = await rawData.json();
-      setResults(response.results);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const queryData = await fetch(
+          `https://api.themoviedb.org/3${
+            !data[genre] ? data.fetchAction.url : data[genre].url
+          }`
+        );
+        const response = await queryData.json();
+        setResults(response.results);
+      } catch (error) {
+        // console.log(error);
+      }
+    };
     fetchData();
   }, [genre]);
 

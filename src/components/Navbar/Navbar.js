@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   let navigate = useNavigate();
-  // console.log(data);
+
   return (
     <nav className="navbar__container">
       <div className="navbar">
@@ -15,7 +15,7 @@ function Navbar() {
           </p>
         ))}
       </div>
-      {/* <div className="navbar__fade"></div> */}
+      <div className="navbar__fade"></div>
     </nav>
   );
 }

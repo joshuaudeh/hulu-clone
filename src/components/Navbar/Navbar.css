@@ -34,13 +34,16 @@
 
 .navbar__fade {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.1);
   top: 5px;
-  color: transparent;
   right: 0;
   height: 1.9rem;
-  width: 10px;
-  backdrop-filter: blur(10px);
+  width: 15px;
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    rgba(6, 32, 42, 0.9),
+    #06202a
+  );
 }
 
 @media only screen and (min-width: 910px) {
